@@ -8,6 +8,10 @@ nav
 	height: 50px
 	background-color: #212121
 	z-index: 5
+
+.hamburger
+	display: none
+
 .menu
 	display: flex
 	justify-content: space-between
@@ -19,13 +23,15 @@ nav
 		font-size: 15px
 		font-weight: 300
 		text-decoration: none
+		&:hover
+			text-decoration: none
+			color: $main-color
 	&_item
 		border-right: 2px dotted black
 		padding-right: 28px
 		&:last-child
 			border-right: none
-.hamburger
-	display: none
+
 .subheader
 	position: absolute
 	top: 50px
@@ -57,6 +63,9 @@ nav
 		text-transform: uppercase
 		text-align: right
 		line-height: 12px
+		&:hover
+			text-decoration: none
+			color: #fff
 	&_btn
 		margin-top: 19px
 		width: 172px
@@ -71,6 +80,8 @@ nav
 		font-weight: 400
 		text-transform: uppercase
 		+btn_hover
+
+
 .promo
 	min-height: 800px
 	background: url('../img/bg_01.jpg') center (center / cover) no-repeat
@@ -100,7 +111,7 @@ nav
 		text-align: center
 		margin-top: 23px
 	&_btn
-		display: block	
+		display: block
 		width: 259px
 		height: 63px
 		box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.12)
@@ -113,7 +124,8 @@ nav
 		font-weight: 400
 		text-transform: uppercase
 		+btn_hover
-		margin: 118px auto 0 auto	
+		margin: 118px auto 0 auto
+
 .reasons
 	padding: 71px 0 65px 0
 	&_block
@@ -159,6 +171,8 @@ nav
 	&_white 
 		background-color: #fff
 		color: #000
+	&_min 
+		width: 76px
 
 .title
 	position: relative
@@ -184,6 +198,7 @@ nav
 	z-index: 2
 	&_white 
 		color: #fff
+
 	
 .mobile 
 	min-height: 864px
@@ -217,7 +232,7 @@ nav
 			line-height: 31px
 			text-transform: uppercase
 			text-align: center
-		&_plus			
+		&_plus
 			display: flex 
 			justify-content: center
 			align-items: center
@@ -234,28 +249,30 @@ nav
 			&:before
 				content: ''
 				display: block
-				width: 14px
-				height: 2px
+				width: 14px 
+				height: 2px 
 				background-color: $main-color
-				transition: .3s all
-			&:after
-				position: absolute
+				transition: 0.3s all
+			&:after 
+				content: ''
+				position: absolute 
 				left: 50%
 				transform: translateX(-50%)
-				content: ''
-				display: block
-				width: 2px
+				display: block 
 				height: 14px
+				width: 2px
 				background-color: $main-color
-				transition: .3s all
-			&:hover
-				&:before, &::after
+				transition: 0.3s all
+			&:hover 
+				&:before, &:after 
 					background-color: $second-color
+
+
 .choice 
 	position: relative
 	min-height: 895px
 	padding: 57px 0 138px 0
-	background: url('../img/mobile_app.png') center (center / cover) no-repeat
+	background: url('../img/bg_02.jpg') center (center / cover) no-repeat
 	&_img 
 		position: relative
 		display: block
@@ -275,34 +292,34 @@ nav
 		width: 100%
 		background-color: #070716
 		z-index: 1
+
 .require
-	padding: 68px 0 84px
-	&_block
+	padding: 68px 0 84px 0
+	&_block 
 		margin: 33px 0
 		&_nmb
-			margin-bottom: 0
-	&_title
+			margin-bottom: 0px
+	&_title 
 		color: #1ca8c3
 		font-size: 22px
-		font-weight: 400		
-	&_list
-		margin-top: 22px
+		font-weight: 400
+	&_list 
 		list-style-type: none
 		padding-left: 50px
-		li
+		margin-top: 22px
+		li 
 			position: relative
-			display: block
 			font-size: 17px
-			font-weight: 300			
+			font-weight: 300
+			line-height: 24px
 			margin-bottom: 10px
-			&:before
+			&:before 
+				content: ''
+				display: block 
 				position: absolute
 				left: -32px
-				top: 3px				
-				content: ''
-				display: block
-				vertical-align: middle
-				width: 21px
+				top: 3px
+				width: 21px 
 				height: 20px
 				background: url('../img/check-blue.png') center (center / cover) no-repeat
 	&_descr 
@@ -317,7 +334,7 @@ nav
 		.require_list
 			li 
 				&:before
-					background: url('../img/check-red.png') center (center / cover) no-repeat
+					background: url('../img/check-red.png') center (center / cover)
 .world 
 	position: relative
 	min-height: 717px
@@ -403,5 +420,10 @@ footer
 			margin-top: 19px
 			text-transform: uppercase
 			text-align: center
-.xs-visible
+.xs-visible 
 	display: none
+
+
+
+
+
